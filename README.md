@@ -36,6 +36,11 @@ Pasirinkite verslo modelį pvz., https://medium.com/coinmonks/build-a-smart-cont
   * Kurjeris gauna sutartyje nurodytą pristatymo mokestį.
   * Platformos operatorius gali gauti komisinį mokestį (jei taikoma).
  
+#### Galimi scenarijai maisto pristatymo verslo modelyje
+Kartais atsitinka taip, kad pristatymo procesas susiduria su iššūkiais ar situacijomis, reikalaujančiomis automatizuoto sprendimo. Išmanioji sutartis padeda užtikrinti sąžiningumą ir skaidrumą visose situacijose, kad verslo modelis veiktų nepriekaištingai. Todėl verta apžvelgti keletą pavyzdžių, kurie gali pasitaikyti gyvenime.
+- **1. Kurjeris negali pristatyti užsakymo**. Kurjeris praneša, kad užsakymo pristatyti nepavyko (pavyzdžiui, pirkėjas neatsiliepia, pateiktas netikslus adresas ar kitos aplinkybės). Tokiu atveju, lėšos gali būti dalinai grąžinamos pirkėjui, atskaičiuojant pardavėjo patirtas išlaidas už maisto paruošimą ir kurjerio išlaidas už kurą. Šis scenarijus užtikrina sąžiningą pinigų paskirstymą tarp dalyvių.
+- **2. Ginčo sprendimas dėl užsakymo kokybės**. Pirkėjas inicijuoja ginčą, teigdamas, kad užsakymas neatitiko lūkesčių (pavyzdžiui, neteisingas patiekalas, sugadintas ar trūko prekių). Išspręsti problemą galima tokiu būdu: laikinai sulaikyti lėšas ir leisti šalims pateikti įrodymus (pavyzdžiui, pirkėjo pateiktas nuotraukas ar kurjerio pristatymo detales). Pagal nustatytas sąlygas ginčas automatiškai sprendžiamas (pavyzdžiui, grąžinama dalis lėšų pirkėjui, o likusi suma paskirstoma pardavėjui ir kurjeriui). Toks scenarijus padeda užtikrinti skaidrumą ir pasitikėjimą tarp visų šalių.
+
 ### 2. Maisto pristatymo modelo su išmaniąja sutartimi realizavimas Solidyti kalboje
 ### 3. Išmaniosios sutarties veikimo ištestavimas Ethereum lokaliame ir testiniame tinkluose
 ### 4. Naudojant Ethereum testinio tinklo Etherscan peržiūrimi išmaniosios sutarties vykdymo "logai"
