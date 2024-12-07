@@ -1,1 +1,1 @@
-# Blockchain4
+# Išmaniosios sutarties ir decentralizuotos aplikacijos kūrimas
