@@ -5,6 +5,7 @@ Pagrindinis šios užduoties tikslas yra sukurti išmaniąją sutartį (angl. sm
 * Decentralizuotos aplikacijos testavimui galite naudoti Ganache įrankį, kuris sukuria lokalų Ethereum tinklą.
 * Jums taip pat prireiks kliento MetaMask, kuris įgalins sąsają su Ethereum tinklu.
 * Išmaniosios sutarties testavimui naudokite ir vieną iš viešųjų Ethereum testinių tinklų (angl. testnet), pvz., Goerli.
+  
 ## Užduoties formuluotė
 1. Aprašykite išmaniosios sutarties verslo modelio logiką, kurią įgyvendins išmanioji sutartis.
 Pasirinkite verslo modelį pvz., https://medium.com/coinmonks/build-a-smart-contract-to-sell-goods-6cf73609d25. Šiame verslo modelyje dalyvauja tokios šalys: pirkėjas , pardavėjas , kurjeris , o pati išmanioji sutartis užtikrina "saugų" prekių pardavimą/pirkimą ir pristatymą .
@@ -14,3 +15,28 @@ Pasirinkite verslo modelį pvz., https://medium.com/coinmonks/build-a-smart-cont
 5. Sukurkite decentralizuotos aplikacijos Front-End ą (tinklapį arba mobiliąją aplikaciją), kuri įgalintų bendravimą su išmaniąja sutartimi.
 * Planas minimum: minimalistinio dizaino ir minimalaus funkcionalumo aplikacija, kuri tiesiog užtirkintų sąveiką su verslo modelio dalyviais ir leistų aktyvuoti išmaniosios sutarties funkcijas, pateikti/nuskaityti sutarčiai reikalingus duomenis.
 * Planas maximum: praplėsto funkcionalamo (ir dizaino) aplikacija. Čia žiūrėkite kūrybiškai, atsižvelgiant į turimą laiką, patirtį ir galimybes.
+
+## Atliktos užduoties aprašymas 
+### 1. Maisto pristatymo modelis su išmaniąja sutartimi
+---
+#### Dalyvaujančios šalys:
+- **Pirkėjas**: Užsako maistą ir pateikia mokėjimą.
+- **Pardavėjas (restoranas)**: Paruošia užsakymą pagal pirkėjo pateiktą užsakymą.
+- **Kurjeris**: Pristato užsakymą pirkėjui.
+- **Išmanioji sutartis**: Užtikrina visų šalių bendradarbiavimą, automatizuoja mokėjimus ir garantuoja proceso saugumą.
+
+#### Išmaniosios sutarties verslo modelio logika
+- **Užsakymo pateikimas**. Pirkėjas pasirenka maistą restorano internetinėje ar mobilioje platformoje ir pateikia užsakymą. Mokėjimas pervedamas į išmaniąją sutartį, kur lėšos yra „užrakinamos“ iki pristatymo patvirtinimo.
+- **Informacijos perdavimas pardavėjui**. Išmanioji sutartis siunčia informaciją apie užsakymą pardavėjui (restoranui). Pardavėjas pradeda maisto gamybos procesą.
+- **Kurjerio įtraukimas**. Kai maistas paruoštas, pardavėjas perduoda informaciją kurjeriui, o išmanioji sutartis užfiksuoja pristatymo procesą. Kurjeris pasiima maistą iš restorano.
+- **Pristatymo sekimas**. Išmanioji sutartis stebi kurjerio judėjimą naudodama integruotas sekimo sistemas (pavyzdžiui, GPS duomenis), kad užtikrintų pristatymo proceso skaidrumą.
+- **Pristatymo patvirtinimas**. Kai kurjeris pristato užsakymą, pirkėjas patvirtina gavimą (pavyzdžiui, naudodamas mobilųjį pranešimą ar mobiliąją programą). Pristatymo patvirtinimas automatiškai paleidžia lėšas iš išmaniosios sutarties.
+- **Mokėjimų paskirstymas**.
+  * Pardavėjas (restoranas) gauna pagrindinę užsakymo dalį.
+  * Kurjeris gauna sutartyje nurodytą pristatymo mokestį.
+  * Platformos operatorius gali gauti komisinį mokestį (jei taikoma).
+ 
+### 2. Maisto pristatymo modelo su išmaniąja sutartimi realizavimas Solidyti kalboje
+### 3. Išmaniosios sutarties veikimo ištestavimas Ethereum lokaliame ir testiniame tinkluose
+### 4. Naudojant Ethereum testinio tinklo Etherscan peržiūrimi išmaniosios sutarties vykdymo "logai"
+### 5. Decentralizuotos aplikacijos Front-End'as, kuris įgalina bendravimą su išmaniąja sutartimi
