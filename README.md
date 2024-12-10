@@ -83,5 +83,121 @@ Kodą galima pažiūrėti "ToyShop.sol". Toliau bus aprašoma kodo logika.
 * Užsakymų skaitiklis (orderCount): kintamasis seka, kiek buvo pateikta užsakymų.
 
 ### 3. Išmaniosios sutarties veikimo ištestavimas Ethereum lokaliame ir testiniame tinkluose
+#### Lokalusis tinklas Ganache
+---
+Parašytą kodą REMIX IDE reikėjo sukompiluoti. Tai galima padaryti skyriuje "Solidity Compiler", išrenkant tinkamą compailer'io versiją ir spaudžiant "Compile ToyShop.sol":
+
+![image](https://github.com/user-attachments/assets/45425a22-fadb-4c1c-bc36-2b2432fde59c)
+
+Tada pasirinkti "Deploy & Run Transactions". Reikia teisingai nurodyti Environment, išrinkau "Custom - External Http Provider" ir pasirinkau siulomą tinklą, tik pakeičiau port'ą į 7545 pagal Ganache nustatymus:
+
+![image](https://github.com/user-attachments/assets/2ebab0ae-de41-42f3-bafe-e4bba77e3d05)
+
+Tada reikia pasirinkti Account iš kurio bus siunčiami arba priimami ETH coins. Value palikau 0, pasirinkau savo sukurtą kontraktą ir paspaudžiau "Deploy".
+
+![image](https://github.com/user-attachments/assets/f5bf1d82-7896-4fed-8474-2d236cddba11)
+
+Galima pastebėti, kad Accont balansas iš kart susimažino. Taip vyksta dėl transakcijos mokėsčio. 
+
+![image](https://github.com/user-attachments/assets/848473eb-f8f8-4341-aefe-f5dcd576bf94)
+
+Po "Deploy" paspaudimo terminale atsirado pranešimas: 
+
+![image](https://github.com/user-attachments/assets/b0a098d4-82da-482a-bd99-bb872e7b6e26)
+
+O Ganache atsirado tai:
+
+![image](https://github.com/user-attachments/assets/339f0655-5b55-4c71-a40b-68fe639c1481)
+![image](https://github.com/user-attachments/assets/65065d77-2fd8-4664-842a-61d35ded80e6)
+
+Vykdant testus, atsirasdavo vis nauji blokai:
+
+![image](https://github.com/user-attachments/assets/3a42d5da-f9cb-48eb-84a8-e60a52b2060b)
+
+Buvo testai, kur buvo mygtukai "Call" ir "Transact".
+
+![image](https://github.com/user-attachments/assets/b2407eb8-dfcb-4d4d-90af-a190be55ee85)
+![image](https://github.com/user-attachments/assets/ea6df9a0-11de-476c-9e10-1ef71c82abd9)
+
+Call naudojami tik norint gauti informaciją iš išmaniosios sutarties.
+
+Transact naudojamas rašymo operacijoms, kurios keiia blockchain būseną, operacijos registruojamos kaip transakcijos.
+
+Paspaudus funkciją createOrder, iš pirkėjo Account buvo nuskaityti lėšai (~3 ETH). Tačiau vėliau, kai žaislas bus pristatytas, parduotuvės savininkas gali paspausti funkciją "withdrawFunds".
+
+![image](https://github.com/user-attachments/assets/f71e2e6e-ea32-454e-b05c-8e03e0126071)
+
+Tada pardavėjas gaus apmokėjimą už prekę, šiuo atveju, ~3 ETH.
+
+![image](https://github.com/user-attachments/assets/3aa0f359-e2a3-4995-addc-a8c60ed3e789)
+
+Transakcijos įvykdytos sėkmingai.
+
+#### Testinis tinklas Sepolia
+---
+Tam, kad galima būtų vykdyti transakcijas, reikia gauti SepholiaETH. Yra svetainės, kur juos galima gauti nemokamai, tačiau galima gauti tik 1 kartą per dieną, arba būtinai reikia, kad būtų ETH Mainnet'e ir kiekis, kuris yra duodamas, yra labai nedidelis. 
+
+![image](https://github.com/user-attachments/assets/dd21d1bf-97a6-4fc4-8bbf-3a9058b36492)
+
+Radau Ethereum Sepolia Faucet, kuriam nereikėjo ETH Mainnet'e, tik Account'o adreso. 
+
+![image](https://github.com/user-attachments/assets/1a9d26ab-a2fc-4cb8-b89f-4d38e21cff58)
+![image](https://github.com/user-attachments/assets/0766560e-4861-4b88-afb7-810c4218f7bb)
+
+Gavau 0.05 SepholiaETH.
+
+![image](https://github.com/user-attachments/assets/233f17c0-1c95-4902-96d6-31a18f752da4)
+
+Tačiau to neužteko.
+
+![image](https://github.com/user-attachments/assets/24b0cb62-ef9a-4fcc-b27b-8ec3958ca2b2)
+
+Todėl įkėliau dar 0.05 į kitą Account ir padariau parvedimą į pagrindinį Account. Gavosi apie 0.09 SepoliaETH. 
+
+"Deploy & Run Transactions" padariau tokiu nustatymus:
+
+![image](https://github.com/user-attachments/assets/de252d2e-c303-4590-8bdf-4bda41dc924f)
+
+Paspaudžiau "Deploy" ir terminale gavau pranešimą:
+
+![image](https://github.com/user-attachments/assets/1eb7cfdd-6395-4c9c-a60a-d389e75728b9)
+
+![image](https://github.com/user-attachments/assets/dea04281-8bc5-4501-9e7c-6156cb24815b)
+
+Nuotraukoje galima pastebėti "view on etherscan", kurį paspaudus, atsirado nuruoda su "logais", reikalingais 4 užduočiai atlikti.
+
+Norėdama įvykdyti transakcijas, kiekvieną kartą reikėjo jas patvirtinti MetaMask'e:
+
+![image](https://github.com/user-attachments/assets/43b0dc4c-fc56-48d9-9f10-a0a27fe868f3)
+
+Parvedimas į kitą Account:
+
+![image](https://github.com/user-attachments/assets/d541720c-d234-40ac-8f41-675122bcfa88)
+
+Pirkėjo balansas sumažėjo. Kur Activity, matome, kad buvo išsiųsta 0.01 SepoliaETH:
+
+![image](https://github.com/user-attachments/assets/1be2cef5-b284-4df6-ba2c-037bd38ff629)
+
+Tačiau, kadangi pardavėjas turi padaryti transakciją - shipOrder, tam irgi reikia SepoliaETH dėl transakcijos mokėsčio, tačiau pardavėjo Account balansas buvo per mažas tam, kad iki galo parodyti visas įvykusias transakcijas.
+
+![image](https://github.com/user-attachments/assets/46f2ac30-9d19-47bb-b903-ba0ef7125f81)
+
+Tačiau pagal praeitus testus, ir "logus", kurie bus pateikti 4 užduotyje, galima padaryti išvadą, kad sutartis veikia gerai.
+
 ### 4. Naudojant Ethereum testinio tinklo Etherscan peržiūrimi išmaniosios sutarties vykdymo "logai"
+Spaudžiant pažymėta tekstą ![image](https://github.com/user-attachments/assets/bd984866-46b9-4507-89e4-d0c326706895), atsidaro sveitainė, kurios nuoroda: https://sepolia.etherscan.io/tx/.
+
+Testai prasidėjo tuo, kad savininkas įveda kokie yra žaislai, kiek jų ir kiek kainuoja. Tai buvo pati pirmiausia transakcija.
+
+![image](https://github.com/user-attachments/assets/0eda955a-60b3-4543-a695-44cd73ffba16)
+
+Parvedimas:
+
+![image](https://github.com/user-attachments/assets/9a63b31b-51ce-40a8-8c06-6351f1a50258)
+
+Nuotraukoje matosi, kad dviejų Account'ų adresai. Vienas kitam išsiųntė 0.01 ETH, matome transakcijos mokėstį, kuro kainą. Svarbu pažymėti, kad transakcijos būsena yra "Success".
+
+![image](https://github.com/user-attachments/assets/815c7b3f-3fcb-4419-aceb-54f48b237e51)
+
+
 ### 5. Decentralizuotos aplikacijos Front-End'as, kuris įgalina bendravimą su išmaniąja sutartimi
