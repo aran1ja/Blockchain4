@@ -17,31 +17,71 @@ Pasirinkite verslo modelį pvz., https://medium.com/coinmonks/build-a-smart-cont
 * Planas maximum: praplėsto funkcionalamo (ir dizaino) aplikacija. Čia žiūrėkite kūrybiškai, atsižvelgiant į turimą laiką, patirtį ir galimybes.
 
 ## Atliktos užduoties aprašymas 
-### 1. Maisto pristatymo modelis su išmaniąja sutartimi
----
+### 1. Žaislų parduotuvės modelis su išmaniąja sutartimi
+
+Ši žaislų parduotuvės veiklos logika remiasi decentralizuotų aplikacijų (dApps) principais, užtikrinančiais skaidrumą ir saugumą naudojant Ethereum blockchain technologiją. Veikla vykdoma išmaniosios sutarties pagalba, kuri valdo prekių pardavimo, mokėjimų ir pristatymo procesus.
+
 #### Dalyvaujančios šalys:
-- **Pirkėjas**: Užsako maistą ir pateikia mokėjimą.
-- **Pardavėjas (restoranas)**: Paruošia užsakymą pagal pirkėjo pateiktą užsakymą.
-- **Kurjeris**: Pristato užsakymą pirkėjui.
-- **Išmanioji sutartis**: Užtikrina visų šalių bendradarbiavimą, automatizuoja mokėjimus ir garantuoja proceso saugumą.
+- **Parduotuvės savininkas**: Atsakingas už žaislų pridėjimą į parduotuvę, valdo prekes sandėlyje, priima užsakymus ir vykdo žaislų siuntimus, gauna pajamas.
+- **Pirkėjas**: Pasirenka norimą žaislą, jų kiekį, atlieka mokėjimą, patvirtina, kad prekės pristatytos.
+- **Išmanioji sutartis**: Užtikrina dviejų šalių bendradarbiavimą, priima ir laiko iš pirkėjo lėšas tol, kol prekės bus pristatytos.
 
-#### Išmaniosios sutarties verslo modelio logika
-- **Užsakymo pateikimas**. Pirkėjas pasirenka maistą restorano internetinėje ar mobilioje platformoje ir pateikia užsakymą. Mokėjimas pervedamas į išmaniąją sutartį, kur lėšos yra „užrakinamos“ iki pristatymo patvirtinimo.
-- **Informacijos perdavimas pardavėjui**. Išmanioji sutartis siunčia informaciją apie užsakymą pardavėjui (restoranui). Pardavėjas pradeda maisto gamybos procesą.
-- **Kurjerio įtraukimas**. Kai maistas paruoštas, pardavėjas perduoda informaciją kurjeriui, o išmanioji sutartis užfiksuoja pristatymo procesą. Kurjeris pasiima maistą iš restorano.
-- **Pristatymo sekimas**. Išmanioji sutartis stebi kurjerio judėjimą naudodama integruotas sekimo sistemas (pavyzdžiui, GPS duomenis), kad užtikrintų pristatymo proceso skaidrumą.
-- **Pristatymo patvirtinimas**. Kai kurjeris pristato užsakymą, pirkėjas patvirtina gavimą (pavyzdžiui, naudodamas mobilųjį pranešimą ar mobiliąją programą). Pristatymo patvirtinimas automatiškai paleidžia lėšas iš išmaniosios sutarties.
-- **Mokėjimų paskirstymas**.
-  * Pardavėjas (restoranas) gauna pagrindinę užsakymo dalį.
-  * Kurjeris gauna sutartyje nurodytą pristatymo mokestį.
-  * Platformos operatorius gali gauti komisinį mokestį (jei taikoma).
- 
-#### Galimi scenarijai maisto pristatymo verslo modelyje
-Kartais atsitinka taip, kad pristatymo procesas susiduria su iššūkiais ar situacijomis, reikalaujančiomis automatizuoto sprendimo. Išmanioji sutartis padeda užtikrinti sąžiningumą ir skaidrumą visose situacijose, kad verslo modelis veiktų nepriekaištingai. Todėl verta apžvelgti keletą pavyzdžių, kurie gali pasitaikyti gyvenime.
-- **1. Kurjeris negali pristatyti užsakymo**. Kurjeris praneša, kad užsakymo pristatyti nepavyko (pavyzdžiui, pirkėjas neatsiliepia, pateiktas netikslus adresas ar kitos aplinkybės). Tokiu atveju, lėšos gali būti dalinai grąžinamos pirkėjui, atskaičiuojant pardavėjo patirtas išlaidas už maisto paruošimą ir kurjerio išlaidas už kurą. Šis scenarijus užtikrina sąžiningą pinigų paskirstymą tarp dalyvių.
-- **2. Ginčo sprendimas dėl užsakymo kokybės**. Pirkėjas inicijuoja ginčą, teigdamas, kad užsakymas neatitiko lūkesčių (pavyzdžiui, neteisingas patiekalas, sugadintas ar trūko prekių). Išspręsti problemą galima tokiu būdu: laikinai sulaikyti lėšas ir leisti šalims pateikti įrodymus (pavyzdžiui, pirkėjo pateiktas nuotraukas ar kurjerio pristatymo detales). Pagal nustatytas sąlygas ginčas automatiškai sprendžiamas (pavyzdžiui, grąžinama dalis lėšų pirkėjui, o likusi suma paskirstoma pardavėjui ir kurjeriui). Toks scenarijus padeda užtikrinti skaidrumą ir pasitikėjimą tarp visų šalių.
+#### Numatomi procesai
+- **Žaislų pridėjimas**. Parduotuvės savininkas gali pridėti naujus žaislus, kurie turės skirtingus pavadinimus, kainas ir kiekius. Kiekvienam žaislui numatomas unikalus identifikatorius.
+- **Užsakymo procesas**. Pirkėjas gali pasirinkti norimą žaislą iš parduotuvės ir pateikti užsakymą: kokio žaislo nori ir kiek. Tada perveda reikiamą sumą (žaislo kaina * kiekis).
+- **Užsakymo apdorojimas**. Sutartis tikrina ar sandėlyje yra tokių žaislų ir ar užtenka jų kiekio. Užregistruoja užsakymą, kad jis apmokėtas ir sumažina prekių sandėlio likutį.
+- **Užsakymo pristatymas**. Parduotuvės savininkas išsiunčia žaislą.
+- **Pristatymo patvirtinimas**. Pirkėjas patvirtina, kad užsakymą gavo.
+- **Lėsų išsiėmimas**. Savininkas gauna lėšas už sėkmingai įvykdytą pardavimą.
 
-### 2. Maisto pristatymo modelo su išmaniąja sutartimi realizavimas Solidyti kalboje
+### 2. Žaislų parduotuvės modelio su išmaniąja sutartimi realizavimas Solidyti kalboje
+Kodą galima pažiūrėti "ToyShop.sol". Toliau bus aprašoma kodo logika.
+#### Parašyto kodo veikimo logika
+* Žaislo pridėjimas į sandėlį (addToy): savininkas įveda informaciją apie žaislo pavadinimą, kainą ir kiekį sandėlyje. Pavyzdys:
+    
+        Pavadinimas: "Teddy Bear".
+        Kaina: 1 ETH (1000000000000000000 Wei).
+        Kiekis: 10.
+
+* Užsakymo kurimas (createOrder): pirkėjas, norėdamas užsakyti žaislą, įveda to žaislo unikalųjį kodą ir kiekį. Tada mato kiek turi sumokėti. Sutartis patikrina, ar yra pakankamai tokių žaislų ir, ar suma atitinka užsakymo kainą. Pavyzdys:
+
+        Žaislo ID: 1 ("Teddy Bear").
+        Kiekis: 2.
+        Mokėjimas: 0.01 ETH.
+
+* Užsakymo išsiuntimas (shipOrder): savininkas išsinčia pirkėjui jo norimą žaislą. Savininkas įveda unikalųjį kodą, kad identifikuoti žaislą. Sutartis tikrina, ar prekė apmokėta. Jei taip, procesas tęsiasi toliau. Pavyzdys:
+
+        Užsakymo ID: 1.
+        Užsakymas pažymimas kaip „Shipped“.
+
+* Pristatymo patvirtinimas (deliverOrder): pirkėjas pateikia žaislo ID ir pažymi, kad pristatymas įvykdytas sėkmingai. Sutartis tikrina, ar funkciją iškviečia tas pats pirkėjas, kuris pateikė užsakymą. Jei taip, užsakymo būsena tampa "Delivered". Pavyzdys:
+
+        Užsakymo ID: 1.
+        Mokėjimas: 0.01 ETH (pervedama parduotuvės savininkui).
+
+* Lėšų išsiėmimas (withdrawFunds): funkcija naudojama savininko, kuris gauna mokėjimą. Pervedama suma lygi sutarties balanse esaniam ETH kiekiui. Pavyzdys:
+
+        Sutarties balansas: 0.03 ETH.
+        Iškvietus funkciją, visi pinigai pervedami savininkui.
+
+* Užsakymų aprašymai (orders): tai duomenų struktūra, skirta sekti visus užsakymus, kurie pateikiami parduotuvėje. Pavyzdys:
+
+        orders[1] = Order(
+            buyer: 0x1234...abcd,    // Pirkėjo adresas
+            toyId: 2,                // Žaislo ID
+            quantity: 3,             // Kiekis
+            totalPrice: 0.03 ETH,    // Suma
+            status: OrderStatus.Paid // Būsena
+        );
+
+* Balanso patikrinimas (getBalance): šią funkciją gali vykdyti tiek pardavėjas, tiek pirkėjas. Funkcija grąžina dabartinį sutarties ETH balansą.
+
+* Sutarties savininko adresas (owner): kintamasis saugo Ethereum adresą, kuris yra sutarties savininkas.
+
+* Žaislų skaitiklis (toyCount): kintamasis seka, kiek žaislų buvo pridėta.
+
+* Užsakymų skaitiklis (orderCount): kintamasis seka, kiek buvo pateikta užsakymų.
+
 ### 3. Išmaniosios sutarties veikimo ištestavimas Ethereum lokaliame ir testiniame tinkluose
 ### 4. Naudojant Ethereum testinio tinklo Etherscan peržiūrimi išmaniosios sutarties vykdymo "logai"
 ### 5. Decentralizuotos aplikacijos Front-End'as, kuris įgalina bendravimą su išmaniąja sutartimi
