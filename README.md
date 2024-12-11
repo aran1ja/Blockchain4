@@ -17,7 +17,7 @@ Pasirinkite verslo modelį pvz., https://medium.com/coinmonks/build-a-smart-cont
 * Planas maximum: praplėsto funkcionalamo (ir dizaino) aplikacija. Čia žiūrėkite kūrybiškai, atsižvelgiant į turimą laiką, patirtį ir galimybes.
 
 ## Atliktos užduoties aprašymas 
-### 1. Žaislų parduotuvės modelis su išmaniąja sutartimi
+## 1. Žaislų parduotuvės modelis su išmaniąja sutartimi
 
 Ši žaislų parduotuvės veiklos logika remiasi decentralizuotų aplikacijų (dApps) principais, užtikrinančiais skaidrumą ir saugumą naudojant Ethereum blockchain technologiją. Veikla vykdoma išmaniosios sutarties pagalba, kuri valdo prekių pardavimo, mokėjimų ir pristatymo procesus.
 
@@ -34,7 +34,7 @@ Pasirinkite verslo modelį pvz., https://medium.com/coinmonks/build-a-smart-cont
 - **Pristatymo patvirtinimas**. Pirkėjas patvirtina, kad užsakymą gavo.
 - **Lėsų išsiėmimas**. Savininkas gauna lėšas už sėkmingai įvykdytą pardavimą.
 
-### 2. Žaislų parduotuvės modelio su išmaniąja sutartimi realizavimas Solidyti kalboje
+## 2. Žaislų parduotuvės modelio su išmaniąja sutartimi realizavimas Solidyti kalboje
 Kodą galima pažiūrėti "ToyShop.sol". Toliau bus aprašoma kodo logika.
 #### Parašyto kodo veikimo logika
 * Žaislo pridėjimas į sandėlį (addToy): savininkas įveda informaciją apie žaislo pavadinimą, kainą ir kiekį sandėlyje. Pavyzdys:
@@ -82,7 +82,7 @@ Kodą galima pažiūrėti "ToyShop.sol". Toliau bus aprašoma kodo logika.
 
 * Užsakymų skaitiklis (orderCount): kintamasis seka, kiek buvo pateikta užsakymų.
 
-### 3. Išmaniosios sutarties veikimo ištestavimas Ethereum lokaliame ir testiniame tinkluose
+## 3. Išmaniosios sutarties veikimo ištestavimas Ethereum lokaliame ir testiniame tinkluose
 #### Lokalusis tinklas Ganache
 ---
 Parašytą kodą REMIX IDE reikėjo sukompiluoti. Tai galima padaryti skyriuje "Solidity Compiler", išrenkant tinkamą compailer'io versiją ir spaudžiant "Compile ToyShop.sol":
@@ -148,12 +148,7 @@ Gavau 0.05 SepholiaETH.
 
 ![image](https://github.com/user-attachments/assets/233f17c0-1c95-4902-96d6-31a18f752da4)
 
-Tačiau to neužteko.
-
-![image](https://github.com/user-attachments/assets/24b0cb62-ef9a-4fcc-b27b-8ec3958ca2b2)
-
-Todėl įkėliau dar 0.05 į kitą Account ir padariau parvedimą į pagrindinį Account. Gavosi apie 0.09 SepoliaETH. 
-
+Įkėliau dar 0.05 į kitą Account ir padariau parvedimą į pagrindinį Account. Gavosi apie 0.09 SepoliaETH. 
 "Deploy & Run Transactions" padariau tokiu nustatymus:
 
 ![image](https://github.com/user-attachments/assets/de252d2e-c303-4590-8bdf-4bda41dc924f)
@@ -184,7 +179,7 @@ Tačiau, kadangi pardavėjas turi padaryti transakciją - shipOrder, tam irgi re
 
 Tačiau pagal praeitus testus, ir "logus", kurie bus pateikti 4 užduotyje, galima padaryti išvadą, kad sutartis veikia gerai.
 
-### 4. Naudojant Ethereum testinio tinklo Etherscan peržiūrimi išmaniosios sutarties vykdymo "logai"
+## 4. Naudojant Ethereum testinio tinklo Etherscan peržiūrimi išmaniosios sutarties vykdymo "logai"
 Spaudžiant pažymėta tekstą ![image](https://github.com/user-attachments/assets/bd984866-46b9-4507-89e4-d0c326706895), atsidaro sveitainė, kurios nuoroda: https://sepolia.etherscan.io/tx/.
 
 Testai prasidėjo tuo, kad savininkas įveda kokie yra žaislai, kiek jų ir kiek kainuoja. Tai buvo pati pirmiausia transakcija.
@@ -200,4 +195,4 @@ Nuotraukoje matosi, kad dviejų Account'ų adresai. Vienas kitam išsiųntė 0.0
 ![image](https://github.com/user-attachments/assets/815c7b3f-3fcb-4419-aceb-54f48b237e51)
 
 
-### 5. Decentralizuotos aplikacijos Front-End'as, kuris įgalina bendravimą su išmaniąja sutartimi
+## 5. Decentralizuotos aplikacijos Front-End'as, kuris įgalina bendravimą su išmaniąja sutartimi
