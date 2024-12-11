@@ -196,3 +196,7 @@ Nuotraukoje matosi, kad dviejų Account'ų adresai. Vienas kitam išsiųntė 0.0
 
 
 ## 5. Decentralizuotos aplikacijos Front-End'as, kuris įgalina bendravimą su išmaniąja sutartimi
+
+![image](https://github.com/user-attachments/assets/feed661a-c8b1-4798-a4a2-a862be3fe2cc)
+
+![image](https://github.com/user-attachments/assets/5c9db045-1d2e-4146-83fc-164cc1283f3e)
