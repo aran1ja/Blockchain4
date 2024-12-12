@@ -144,12 +144,7 @@ Radau Ethereum Sepolia Faucet, kuriam nereikėjo ETH Mainnet'e, tik Account'o ad
 ![image](https://github.com/user-attachments/assets/1a9d26ab-a2fc-4cb8-b89f-4d38e21cff58)
 ![image](https://github.com/user-attachments/assets/0766560e-4861-4b88-afb7-810c4218f7bb)
 
-Gavau 0.05 SepholiaETH.
-
-![image](https://github.com/user-attachments/assets/233f17c0-1c95-4902-96d6-31a18f752da4)
-
-Įkėliau dar 0.05 į kitą Account ir padariau parvedimą į pagrindinį Account. Gavosi apie 0.09 SepoliaETH. 
-"Deploy & Run Transactions" padariau tokiu nustatymus:
+Keletą kartų gavau po 0.05 SepholiaETH. "Deploy & Run Transactions" padariau tokiu nustatymus:
 
 ![image](https://github.com/user-attachments/assets/de252d2e-c303-4590-8bdf-4bda41dc924f)
 
@@ -161,23 +156,43 @@ Paspaudžiau "Deploy" ir terminale gavau pranešimą:
 
 Nuotraukoje galima pastebėti "view on etherscan", kurį paspaudus, atsirado nuruoda su "logais", reikalingais 4 užduočiai atlikti.
 
-Norėdama įvykdyti transakcijas, kiekvieną kartą reikėjo jas patvirtinti MetaMask'e:
+Pradinis pirkėjo ir pardavėjo piniginės dydis SepoliaETH:
 
-![image](https://github.com/user-attachments/assets/43b0dc4c-fc56-48d9-9f10-a0a27fe868f3)
+Pirkėjo: ![image](https://github.com/user-attachments/assets/cf958de8-2f95-43c5-a2f5-a4051031a956)
 
-Parvedimas į kitą Account:
+Pardavėjo: ![image](https://github.com/user-attachments/assets/1ef0a6a3-03aa-4f7e-b09b-c27f1ef1d4e3)
 
-![image](https://github.com/user-attachments/assets/d541720c-d234-40ac-8f41-675122bcfa88)
+Vykdant kiekvieną transakciją, reikia patvirtinti ją MetaMask'e. Pavyzdžiui, įvedant žaislų pavadinimą, kainą ir kiekį, pardavėjas privalo sumokėti mokėstį:
 
-Pirkėjo balansas sumažėjo. Kur Activity, matome, kad buvo išsiųsta 0.01 SepoliaETH:
+![image](https://github.com/user-attachments/assets/2077298c-0afb-499c-824d-281e27a710c9)
 
-![image](https://github.com/user-attachments/assets/1be2cef5-b284-4df6-ba2c-037bd38ff629)
+Pirkėjas, norėdamas įsigyti prekę, turi pervesti pinigus (0.04 ETH, nes buvo nupirktos 2 prekės po 0.02 ETH):
 
-Tačiau, kadangi pardavėjas turi padaryti transakciją - shipOrder, tam irgi reikia SepoliaETH dėl transakcijos mokėsčio, tačiau pardavėjo Account balansas buvo per mažas tam, kad iki galo parodyti visas įvykusias transakcijas.
+![image](https://github.com/user-attachments/assets/17ed9caf-d3b8-4dd4-a823-4aedb40c3a2f)
 
-![image](https://github.com/user-attachments/assets/46f2ac30-9d19-47bb-b903-ba0ef7125f81)
+Tam, kad pardavėjas galėtų gauti pinigus, pirkėjas turi patvirtinti pristatymą:
 
-Tačiau pagal praeitus testus, ir "logus", kurie bus pateikti 4 užduotyje, galima padaryti išvadą, kad sutartis veikia gerai.
+![image](https://github.com/user-attachments/assets/d607a32b-d0ee-4279-a60e-a6938cdcfd68)
+
+Tada pardavėjas gauna pinigų:
+
+![image](https://github.com/user-attachments/assets/75767973-2628-474e-9133-7d67613e3f84)
+
+Atnaujintos pardavėjo ir pirkėjo piniginės:
+
+Pardavėjo: ![image](https://github.com/user-attachments/assets/c7bb0d7c-6a41-4739-959b-101fc95eaa35)
+
+Pirkėjo: ![image](https://github.com/user-attachments/assets/be568885-7137-4b35-abe2-6d051197f233)
+
+
+Apibendrintas galutinis rezultatas:
+
+| Vartotojas | Pirminis ETH kiekis | Galutinis ETH kiekis |
+|------------|---------------------|----------------------|
+| Pardavėjas | 0.0439              | 0.0773               |
+| Pirkėjas   | 0.0706              | 0.0297               |
+
+Teoriškai, pardavėjo galutinis ETH kiekis turėtų būti 0.0839, o pirkėjo 0.0306. Tačiau svarbu nepamiršti apie **transakcijų mokėstis**.
 
 ## 4. Naudojant Ethereum testinio tinklo Etherscan peržiūrimi išmaniosios sutarties vykdymo "logai"
 Spaudžiant pažymėta tekstą ![image](https://github.com/user-attachments/assets/bd984866-46b9-4507-89e4-d0c326706895), atsidaro sveitainė, kurios nuoroda: https://sepolia.etherscan.io/tx/.
