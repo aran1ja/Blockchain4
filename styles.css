@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #cacaca;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ececec;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(99, 99, 99, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding-bottom: 5%;
+}
+
+#contract-interaction {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    width: 76%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+
+button:hover {
+    background-color: #00bdbd;
+    transition: 600ms;
+}
