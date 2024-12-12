@@ -255,6 +255,15 @@ Tam, kad sukurti deentralizuotos aplikacijos Front-End'ą, dariau tokius žingsn
 
 ![image](https://github.com/user-attachments/assets/408df5f6-fa51-48e6-852f-d41517beb956)
 
-12. Spaudžiame "Buy". Transakciją reikėtų patvirtinti MetaMask'e, tačiau šiuo metu man neveikia programa.
+12. Pradinis balanasas:
 
-![image](https://github.com/user-attachments/assets/14ab4a26-9ae4-4e9a-b05f-d01c1dd5c2ac)
+![image](https://github.com/user-attachments/assets/ddb70f87-494a-4f38-b113-4235cfd189e6)
+
+13. Spaudžiame "Buy" ir atsidaro MetaMask langas, kuris parodo kiek ETH norime pervesti ir rodo mokėstį.
+
+![image](https://github.com/user-attachments/assets/9bf96965-edb7-461c-98f5-d96c4bee4b86)
+
+14. Galutinio balanso parodyti nesigauna, nes man rodo klaidos pranešimą.
+
+![image](https://github.com/user-attachments/assets/04600869-a877-4a36-82b1-e7ef3fdd8be6)
+
