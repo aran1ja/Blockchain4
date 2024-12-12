@@ -196,7 +196,31 @@ Nuotraukoje matosi, kad dviejų Account'ų adresai. Vienas kitam išsiųntė 0.0
 
 
 ## 5. Decentralizuotos aplikacijos Front-End'as, kuris įgalina bendravimą su išmaniąja sutartimi
+Tam, kad sukurti deentralizuotos aplikacijos Front-End'ą, dariau tokius žingsnius, kurie bus nurodyti po apačią.
+1. Įjungiau terminalą.
+2. Įvedžiau kodą "npm install web3".
 
-![image](https://github.com/user-attachments/assets/feed661a-c8b1-4798-a4a2-a862be3fe2cc)
+![image](https://github.com/user-attachments/assets/f9d39a16-6b38-47d0-88ea-6ce745f5308c)
 
-![image](https://github.com/user-attachments/assets/5c9db045-1d2e-4146-83fc-164cc1283f3e)
+3. Atidariau VSCode ir sukuriau ten aplankalą Frontend-dapp, kur įdėjau 4 failus.
+
+![image](https://github.com/user-attachments/assets/ce924974-d53a-4840-9fce-a1446aaa1900)
+
+4. Terminale parašiau "npm install -g lite-server"
+
+![image](https://github.com/user-attachments/assets/34acc47c-3f24-4072-97d1-12128e02b9f1)
+
+5. Nurodžiau kelią iki mano projekto aplankalo.
+
+![image](https://github.com/user-attachments/assets/14790633-f1f7-4fbd-9421-f4c39e186500)
+
+6. Įvedžiau kodą lite-server.
+
+![image](https://github.com/user-attachments/assets/bada168b-472a-4c53-bef0-fa14d5b98238)
+
+7. Atsidare toks puslapis, kuriame galima prijungti MetaMask:
+
+![image](https://github.com/user-attachments/assets/c8824479-deb5-4d8f-b99c-108221ce6523)
+
+![image](https://github.com/user-attachments/assets/cc7880f1-c012-4ee3-8faa-52b103c96ee3)
+
