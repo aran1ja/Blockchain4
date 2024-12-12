@@ -218,9 +218,28 @@ Tam, kad sukurti deentralizuotos aplikacijos Front-End'ą, dariau tokius žingsn
 
 ![image](https://github.com/user-attachments/assets/bada168b-472a-4c53-bef0-fa14d5b98238)
 
-7. Atsidare toks puslapis, kuriame galima prijungti MetaMask:
+7. Atsidarė toks puslapis, kuriame galima prijungti MetaMask:
 
 ![image](https://github.com/user-attachments/assets/c8824479-deb5-4d8f-b99c-108221ce6523)
 
 ![image](https://github.com/user-attachments/assets/cc7880f1-c012-4ee3-8faa-52b103c96ee3)
 
+8. Turime Account, kurio pradinis balansas yra 100 ETH.
+
+![image](https://github.com/user-attachments/assets/0b866988-55d1-41cd-bb5d-84735f85732c)
+
+9. Prisijungiame prie aplikacijos.
+
+![image](https://github.com/user-attachments/assets/0328d664-7362-4401-a8de-54a8ea8408aa)
+
+10. Prisijungiame prie MetaMask ir programa pamatys koks adresas nustatytas.
+
+![image](https://github.com/user-attachments/assets/e9857d4b-2111-4b0d-8ef5-68aa56dce93c)
+
+11. Atsiranda testinė prekė, kurią galima nupirkti, įvedant norimos prekės kiekį.
+
+![image](https://github.com/user-attachments/assets/408df5f6-fa51-48e6-852f-d41517beb956)
+
+12. Spaudžiame "Buy". Transakciją reikėtų patvirtinti MetaMask'e, tačiau šiuo metu man neveikia programa.
+
+![image](https://github.com/user-attachments/assets/14ab4a26-9ae4-4e9a-b05f-d01c1dd5c2ac)
