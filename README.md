@@ -245,15 +245,15 @@ Tam, kad sukurti deentralizuotos aplikacijos Front-End'ą, dariau tokius žingsn
 
 9. Prisijungiame prie aplikacijos.
 
-![image](https://github.com/user-attachments/assets/0328d664-7362-4401-a8de-54a8ea8408aa)
+![image](https://github.com/user-attachments/assets/6a99a2f5-d566-4495-bbae-fa37a2c62465)
 
 10. Prisijungiame prie MetaMask ir programa pamatys koks adresas nustatytas.
 
-![image](https://github.com/user-attachments/assets/e9857d4b-2111-4b0d-8ef5-68aa56dce93c)
+![image](https://github.com/user-attachments/assets/b5787a32-47aa-4f6b-9cc3-734d180030db)
 
 11. Atsiranda testinė prekė, kurią galima nupirkti, įvedant norimos prekės kiekį.
 
-![image](https://github.com/user-attachments/assets/408df5f6-fa51-48e6-852f-d41517beb956)
+![image](https://github.com/user-attachments/assets/6fb23d86-4f15-4a8f-9b62-71564fca938f)
 
 12. Pradinis balanasas:
 
@@ -266,4 +266,12 @@ Tam, kad sukurti deentralizuotos aplikacijos Front-End'ą, dariau tokius žingsn
 14. Galutinio balanso parodyti nesigauna, nes man rodo klaidos pranešimą.
 
 ![image](https://github.com/user-attachments/assets/04600869-a877-4a36-82b1-e7ef3fdd8be6)
+
+15. Tačiau Ganache vis tiek mato, kad buvo inicjuotas pervedimas ir sukuria tam blokus.
+
+![image](https://github.com/user-attachments/assets/62213d92-0c0b-45de-ab6e-2061569ba1d3)
+
+![image](https://github.com/user-attachments/assets/538218b9-fe11-41d8-b285-04cc0dbf28ed)
+
+
 
